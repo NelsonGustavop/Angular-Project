@@ -14,9 +14,6 @@ import javax.persistence.ManyToOne;
 import com.Slayer.Angular.domain.enums.Prioridade;
 import com.Slayer.Angular.domain.enums.Status;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.core.sym.Name;
-
-import net.bytebuddy.dynamic.loading.ClassReloadingStrategy.Strategy;
 
 @Entity
 public class Chamado  implements Serializable{

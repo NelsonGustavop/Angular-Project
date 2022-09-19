@@ -13,7 +13,6 @@ import com.Slayer.Angular.domain.enums.Prioridade;
 import com.Slayer.Angular.domain.enums.Status;
 import com.Slayer.Angular.repositories.ChamadoRepository;
 import com.Slayer.Angular.repositories.ClienteRepository;
-import com.Slayer.Angular.repositories.PessoaRepository;
 import com.Slayer.Angular.repositories.TecnicoRepository;
 
 @Service
@@ -25,8 +24,6 @@ public class DBService {
 	private ClienteRepository cR;
 	@Autowired
 	private ChamadoRepository chR;
-	@Autowired
-	private PessoaRepository pR;
 
 	public void instanciaDB() {
 		Tecnico t1 = new Tecnico(null, "Maquiavel", "519849885", "mak@gmail.com", "Tu é doido doido");

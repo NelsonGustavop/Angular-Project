@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Profile;
 import com.Slayer.Angular.services.DBService;
 
 @Configuration
-@Profile("test")
-public class TestConfig {
+@Profile("dev")
+public class DevConfig {
 
 	@Autowired
 	private DBService dbServices;
@@ -19,7 +19,10 @@ public class TestConfig {
 	private String value;
 
 	@Bean
-	public void instanciaDB() {
-		this.dbServices.instanciaDB();
+	public boolean instanciaDB() {
+		if (value.equals("create")) {
+			this.dbServices.instanciaDB();
+		}
+		return false;
 	}
 }
