@@ -24,7 +24,7 @@ public class DataIntegrityViolationException extends RuntimeException {
 	@ExceptionHandler(DataIntegrityViolationException.class)
 	  public ResponseEntity<StandardError> dataIntegrityViolationException(DataIntegrityViolationException ex, HttpServletRequest request){
 		  StandardError error = new StandardError(System.currentTimeMillis(), HttpStatus.BAD_REQUEST.value(),
-				  "violação de dados", ex.getMessage(), request.getRequestURI());
+				  "violação de dados", "Field Validation error", request.getRequestURI());
 		  return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
 	}
 	
