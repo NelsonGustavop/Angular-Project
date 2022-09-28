@@ -1,7 +1,7 @@
 package com.Slayer.Angular.domain.enums;
 
 public enum Perfil {
-	ADMIN(0, "role_admin"), CLIENTE(1, "role_cliente"), TECNICO(2, "role_tecnico");
+	ADMIN(0, "ROLE_ADMIN"), CLIENTE(1, "role_cliente"), TECNICO(2, "role_tecnico");
 
 	private Integer codigo;
 	private String descricao;
