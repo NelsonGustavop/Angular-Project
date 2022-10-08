@@ -31,12 +31,13 @@ public class TecnicoResource {
 	@Autowired
 	private TecnicoService service;
 
+	@PreAuthorize(" hasAnyRole('ADMIN')")
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<TecnicoDTO> findById(@PathVariable Integer id) {
 		Tecnico obj = service.findById(id);
 		return ResponseEntity.ok().body(new TecnicoDTO(obj));
 	}
-
+	
 	@GetMapping
 	public ResponseEntity<List<TecnicoDTO>> findAll() {
 		List<Tecnico> list = service.findAll();
